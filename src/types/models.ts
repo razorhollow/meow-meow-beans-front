@@ -4,12 +4,20 @@
 
 /* ---------===== auth models =====--------- */
 
+export interface Vote {
+  value: number;
+  profileId: number;
+  voterId: number;
+}
+
 export interface Profile {
   name: string;
   photo?: string;
   id: number;
   createdAt: string;
   updatedAt: string;
+  votesReceived: Vote[];
+  votesGiven: Vote[];
 }
 
 export interface User {
