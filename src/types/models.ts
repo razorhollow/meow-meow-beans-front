@@ -14,10 +14,11 @@ export interface Profile {
   name: string;
   photo?: string;
   id: number;
+  userId: number;
   createdAt: string;
   updatedAt: string;
   votesReceived: Vote[];
-  votesGiven: Vote[];
+  votesGiven?: Vote[];
 }
 
 export interface User {

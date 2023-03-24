@@ -1,6 +1,9 @@
 /* ---------==== custom forms ====--------- */
 
-
+export interface VoteManagerFormData {
+  value: number;
+  profileId: number;
+}
 
 /* ---------===== auth forms =====--------- */
 
