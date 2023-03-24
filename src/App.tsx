@@ -70,7 +70,7 @@ useEffect((): void => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing user={user} handleLogout={handleLogout} />} />
         <Route
           path="/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}

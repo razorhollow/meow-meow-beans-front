@@ -90,4 +90,17 @@ async function changePassword(formData: ChangePasswordFormData): Promise<void> {
   }
 }
 
-export { signup, getUser, logout, login, changePassword }
+async function deleteAccount(): Promise<void> {
+  try {
+    await fetch(`${BASE_URL}/delete`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+  } catch (error) {
+    throw error
+  }
+}
+
+export { signup, getUser, logout, login, changePassword, deleteAccount }
